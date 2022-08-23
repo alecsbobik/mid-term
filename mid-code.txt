@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Midterm Examination</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin-left: 2rem;
+      }
+      #select {
+        height: 2rem;
+        border-color: dodgerblue;
+        border-radius: 0px;
+        outline: none;
+        text-align: center;
+      }
+
+      #select option {
+        text-align: left;
+        outline: none;
+      }
+
+      #btn_change {
+        height: 2rem;
+        border: none;
+        border-radius: 2px;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><span>Midterm Examination</span> Javascript / JQuery</h2>
+
+    <p>
+      This is your <span>Midterm Examination</span> , I hope you study well;
+      using CSS jquery method,
+    </p>
+
+    <label>Change the midterm color to:</label>
+
+    <select id="select">
+      <div class="color-item">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </div>
+    </select>
+    <button id="btn_change">Change!</button>
+
+    <script type="text/javascript">
+      $("#btn_change").click(function () {
+        var clr = document.getElementById("select").value;
+        $("span").css("color", clr);
+        $("span").css("font-weight", "bold");
+      });
+    </script>
+  </body>
+</html>
